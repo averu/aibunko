@@ -31,5 +31,7 @@ export const images = style({
 export const root = style({
   width: '100%',
   height: 'auto',
+  display: 'flex',
+  justifyContent: 'center',
   objectFit: 'cover',
 })
