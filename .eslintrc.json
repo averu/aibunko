@@ -10,6 +10,7 @@
     "airbnb/hooks",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
+    "next",
     "prettier"
   ],
   "overrides": [
@@ -28,7 +29,7 @@
     "sourceType": "module",
     "project": "./tsconfig.json"
   },
-  "plugins": ["@typescript-eslint", "react"],
+  "plugins": ["@typescript-eslint", "react", "import"],
   "rules": {
     //関数や変数が定義される前に使われているとエラーになるデフォルトの機能をoff
     "no-use-before-define": "off",
@@ -51,7 +52,7 @@
     ],
     "import/extensions": [
       "error",
-      "ignorePackages",
+      "always",
       {
         "js": "never",
         "jsx": "never",
@@ -72,12 +73,12 @@
         "alphabetize": { "order": "asc", "caseInsensitive": true },
         "pathGroups": [
           {
-            "pattern": "{react,react-dom/**,react-router-dom}",
+            "pattern": "{react,react-dom/**,react-router-dom,next/**}",
             "group": "builtin",
             "position": "before"
           },
           {
-            "pattern": "@src/**",
+            "pattern": "@/**",
             "group": "parent",
             "position": "before"
           }
