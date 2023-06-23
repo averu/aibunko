@@ -1,5 +1,7 @@
-import { AiFillTwitterCircle } from 'react-icons/ai'
 import Link from 'next/link'
+
+import { AiFillTwitterCircle } from 'react-icons/ai'
+
 import * as styles from '@/components/FooterContainer.css'
 
 const FooterContainer = () => (
