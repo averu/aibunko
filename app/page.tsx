@@ -1,6 +1,6 @@
-import BackgroundImage from '../components/BackgroundImage'
-import FooterContainer from '../components/FooterContainer'
-import MainContainer from '../components/MainContainer'
+import BackgroundImage from '@/components/BackgroundImage'
+import FooterContainer from '@/components/FooterContainer'
+import MainContainer from '@/components/MainContainer'
 
 import styles from './page.module.css'
 
