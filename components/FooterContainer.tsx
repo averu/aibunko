@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { AiFillTwitterCircle, AiFillGithub } from 'react-icons/ai'
+import { AiFillGithub,AiFillTwitterCircle } from 'react-icons/ai'
 
 import * as styles from '@/components/FooterContainer.css'
 
