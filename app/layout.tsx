@@ -14,6 +14,10 @@ export const metadata = {
       'Midjouney(nijijourney)とChatGPTを活用し、装丁デザインの学習を目的とした架空の出版社をイメージしたWebサイトです。',
     images: ['/ogp_image.jpg'],
   },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@_averu_',
+  },
 }
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
