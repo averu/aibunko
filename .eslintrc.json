@@ -10,7 +10,7 @@
     "airbnb/hooks",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
-    "next",
+    "next/core-web-vitals",
     "prettier"
   ],
   "overrides": [
@@ -29,7 +29,7 @@
     "sourceType": "module",
     "project": "./tsconfig.json"
   },
-  "plugins": ["@typescript-eslint", "react", "import"],
+  "plugins": ["@typescript-eslint", "react", "simple-import-sort"],
   "rules": {
     //関数や変数が定義される前に使われているとエラーになるデフォルトの機能をoff
     "no-use-before-define": "off",
@@ -61,30 +61,10 @@
       }
     ],
     // importの自動整列
-    "import/order": [
-      "error",
-      {
-        // グループ毎の並び順
-        "groups": ["builtin", "external", "parent", "sibling", "index", "object", "type"],
-        // グループ毎に改行
-        "newlines-between": "always",
-        "pathGroupsExcludedImportTypes": ["builtin"],
-        // アルファベット順・大文字小文字を区別しない
-        "alphabetize": { "order": "asc", "caseInsensitive": true },
-        "pathGroups": [
-          {
-            "pattern": "{react,react-dom/**,react-router-dom,next/**}",
-            "group": "builtin",
-            "position": "before"
-          },
-          {
-            "pattern": "@/**",
-            "group": "parent",
-            "position": "before"
-          }
-        ]
-      }
-    ],
+    "simple-import-sort/imports": "error",
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
     // 型情報しか使ってないimportをimport typeに強制
     "@typescript-eslint/consistent-type-imports": ["error", { "prefer": "type-imports" }],
     //jsx形式のファイル拡張子をjsxもしくはtsxに限定
